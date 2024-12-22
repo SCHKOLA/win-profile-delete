@@ -1,0 +1,21 @@
+[package]
+name = "win-profile-delete"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+walkdir = "2"
+wmi = "0.14"
+windows = { version = "0.58", features = [
+    "Win32_Devices_DeviceAndDriverInstallation",
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_Security_Authorization",
+    "Win32_Storage_FileSystem",
+    "Win32_System_IO",
+    "Win32_System_Memory",
+    "Win32_System_Power",
+    "Win32_UI_Shell",
+] }
